@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<header class="page">
+    <div class="container">
+        <ul class="breadcrumbs d-flex flex-wrap align-content-center">
+            <li class="list-item">
+                <a class="link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="list-item">
+                <a class="link" href="{% url 'blog' %}">Blog</a>
+            </li>
+        </ul>
+        <h1 class="page_title">Blog</h1>
+    </div>
+</header>
+
+<section class="latest section section--blockbg">
+    <div class="block"></div>
+    <div class="container">
+        <ul class="latest_list d-flex flex-wrap">
+            {% for blog in blogs %}
+            <li class="latest_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                <article class="item-wrapper d-flex flex-column">
+                    <figure class="media">
+                        <picture>
+                            <source srcset="{{ blog.image.url }}" type="image/webp">
+                            <img class="img-fluid lazy" src="{{ blog.image.url }}" alt="{{ blog.headline }}" loading="lazy">
+                        </picture>
+                    </figure>
+                    <div class="main d-flex flex-column justify-content-between flex-grow-1">
+                        <a class="main_title h4" href="#">{{ blog.headline }}</a>
+                        <p class="main_preview">{{ blog.description|truncatechars:250 }}</p>
+                    </div>
+                </article>
+            </li>
+            {% empty %}
+            <li class="col-12">
+                <p class="no-blogs">No blog posts available yet.</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+<style>
+    /* Enhanced existing styles without changing structure */
+    .latest {
+        padding: 60px 0;
+    }
+    
+    .latest_list {
+        list-style: none;
+        padding: 0;
+        margin: -15px;
+    }
+    
+    .latest_list-item {
+        padding: 15px;
+    }
+    
+    .item-wrapper {
+        height: 100%;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+    }
+    
+    .item-wrapper:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+    
+    .media {
+        margin: 0;
+        height: 220px;
+        overflow: hidden;
+    }
+    
+    .media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .item-wrapper:hover .media img {
+        transform: scale(1.05);
+    }
+    
+    .main {
+        padding: 20px;
+    }
+    
+    .main_title {
+        color: #2d3748;
+        margin-bottom: 12px;
+        transition: color 0.3s ease;
+        text-decoration: none;
+    }
+    
+    .main_title:hover {
+        color: #4a5568;
+    }
+    
+    .main_preview {
+        color: #718096;
+        margin-bottom: 15px;
+    }
+    
+    .read-more {
+        color: #4299e1;
+        font-weight: 500;
+        text-decoration: none;
+        align-self: flex-start;
+        transition: all 0.3s ease;
+    }
+    
+    .read-more:hover {
+        color: #2b6cb0;
+        transform: translateX(5px);
+    }
+    
+    .no-blogs {
+        text-align: center;
+        padding: 40px;
+        color: #718096;
+    }
+    
+    @media (max-width: 767.98px) {
+        .media {
+            height: 180px;
+        }
+    }
+</style>
+{% endblock %}

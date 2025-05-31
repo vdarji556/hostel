@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <!-- Hero Section -->
+   <section class="hero section">
+    <div class="container container--hero d-flex flex-column flex-lg-row align-items-center justify-content-between">
+        <div class="hero_main col-lg-6">
+            <h1 class="hero_main-title" data-aos="fade-up">Deepjyot Hostel, Dhanera</h1>
+            <div class="hero_main-content d-flex align-items-start">
+                <span class="line" data-aos="fade-up" data-aos-delay="50"></span>
+                <p class="text" data-aos="fade-up" data-aos-delay="100">
+                    “ઘર થી દૂર પોતાનું ઘર જેવી સુવિધા — દીપજ્યોત હોસ્ટેલ”<br>
+                    Premier residential facility in Dhanera for students from villages, offering a disciplined environment, quality education, and excellent amenities.
+                </p>
+            </div>
+        </div>
+        <div class="hero_media col-lg-5" data-aos="zoom-in">
+            <picture>
+                <source srcset="{% static 'img/home3.jpeg' %}" type="image/webp">
+                <img class="img-fluid lazy" src="{% static 'img/home3.jpeg' %}" alt="Deepjyot Hostel Dhanera exterior view" loading="lazy">
+            </picture>
+        </div>
+    </div>
+</section>
+
+ <section class="team section">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">FOUNDERS</h2>
+        <div class="row justify-content-center">
+
+            <!-- Founder 1 -->
+            <div class="col-md-6 col-xl-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card shadow-lg p-4 text-center h-100 team-card">
+                    <img src="{% static 'img/chetan.jpg' %}" 
+                         alt="Chetan Darji, Founder & CEO" 
+                         class="rounded-circle mb-3 mx-auto img-fluid team-img" 
+                         width="120" height="120" style="object-fit: cover;">
+                    <h4 class="mb-1">Chetan Darji</h4>
+                    <p class="text-muted mb-2">Founder & CEO (M.A., B.Ed)</p>
+                    <p class="text">"As an educator, I designed this hostel to be an extension of the classroom — a space where students can focus, grow, and develop life skills alongside their studies."</p>
+                </div>
+            </div>
+
+            <!-- Founder 2 -->
+            <div class="col-md-6 col-xl-4 mb-4" data-aos="fade-up" data-aos-delay="150">
+                <div class="card shadow-lg p-4 text-center h-100 team-card">
+                    <img src="{% static 'img/bharat.jpg' %}" 
+                         alt="Bharat Desai, Co-Founder & Manager" 
+                         class="rounded-circle mb-3 mx-auto img-fluid team-img" 
+                         width="120" height="120" style="object-fit: cover;">
+                    <h4 class="mb-1">Bharat Desai</h4>
+                    <p class="text-muted mb-2">Co-Founder & Manager (B.A., B.Ed)</p>
+                    <p class="text">"Our hostel isn’t just accommodation — it’s a learning community where educational principles help students build discipline and responsibility."</p>
+                </div>
+            </div>
+
+            <!-- Founder 3 -->
+            <div class="col-md-6 col-xl-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+               <div class="card shadow-lg p-4 text-center h-100 team-card">
+            <img src="{% static 'img/owner.jpeg' %}" 
+                alt="Chaudhary Bhemabhai, Co-Founder & Manager" 
+                class="rounded-circle mb-3 mx-auto img-fluid team-img" 
+                width="120" height="120" style="object-fit: cover;">
+            <h4 class="mb-1">Chaudhary Bhemabhai</h4>
+            <p class="text-muted mb-2">Co-Founder & Manager</p>
+            <p class="text">
+                "We believe in nurturing students holistically — mentally, academically, and emotionally — preparing them for a brighter future."
+            </p>
+        </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Amenities Section -->
+    <section class="amenities py-5 bg-white">
+    <div class="container">
+        <!-- Header Section -->
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">WE HAVE EVERYTHING YOU NEED</h2>
+            <p class="text-muted lead">Premium amenities for your complete comfort and convenience</p>
+        </div>
+
+        <!-- Amenities Grid -->
+        <div class="row justify-content-center g-4">
+            <!-- Group 1 -->
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap gap-4 justify-content-center">
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-wifi fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">HIGH-SPEED WIFI</p>
+                    </div>
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-location-dot fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">CENTRAL LOCATION</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 2 -->
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap gap-4 justify-content-center">
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-briefcase fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">LUGGAGE STORAGE</p>
+                    </div>
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-square-parking fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">DEDICATED PARKING</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 3 (Fixed typo: "WATER BREAKF PUBLICATIONS" → "WATER PURIFICATION") -->
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap gap-4 justify-content-center">
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-filter fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">WATER PURIFICATION</p>
+                    </div>
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-utensils fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">BREAKFAST & DINING</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 4 -->
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap gap-4 justify-content-center">
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-shirt fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">LAUNDRY SERVICES</p>
+                    </div>
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-bed fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">PREMIUM BEDDING</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery section" aria-labelledby="gallery-title">
+  <div class="container">
+    <header class="gallery_header d-flex justify-content-between align-items-center flex-column flex-sm-row">
+      <h2 id="gallery-title" class="gallery_header-title">Photos of Our Rooms</h2>
+      <div class="wrapper">
+        <a class="btn theme-element theme-element--light" href="{% url 'gallery' %}" role="button">
+          View All Photos
+        </a>
+      </div>
+    </header>
+
+    <div class="gallery_grid d-grid" role="list">
+      {% for image in images %}
+      <figure class="gallery_grid-item" data-aos="zoom-in" role="listitem">
+        <a href="{{ image.image.url }}" 
+           data-caption="{{ image.caption }}" 
+           data-role="gallery-link" 
+           aria-label="View full-size {{ image.caption|default:'hostel image' }}">
+          <picture>
+            <source srcset="{{ image.image.url }}" type="image/webp">
+            <img class="gallery_grid-item_img img-fluid lazy" 
+                 src="{{ image.image.url }}" 
+                 alt="{{ image.caption|default:'Hostel image' }}" 
+                 loading="lazy" />
+          </picture>
+          <div class="overlay d-flex align-items-center justify-content-center" aria-hidden="true">
+            <div class="overlay_focus">
+              <svg width="105" height="106" aria-hidden="true" focusable="false">
+                <use xlink:href="#zoom-icon"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="latest section section--blockbg">
+        <div class="block"></div>
+        <div class="container">
+            <div class="latest_header d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                <h2 class="latest_header-title" data-aos="fade-right">Hosteller Blog</h2>
+                <div class="wrapper" data-aos="fade-left">
+                    <a class="btn theme-element theme-element--light" href="{% url 'blog' %}">View All Blog</a>
+                </div>
+            </div>
+            <ul class="latest_list d-flex flex-wrap">
+           {% for blog in blogs %}
+            <li class="latest_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                <article class="item-wrapper d-flex flex-column">
+                    <figure class="media">
+                        <picture>
+                            <source srcset="{{ blog.image.url }}" type="image/webp">
+                            <img class="img-fluid lazy" src="{{ blog.image.url }}" alt="{{ blog.headline }}" loading="lazy">
+                        </picture>
+                    </figure>
+                    <div class="main d-flex flex-column justify-content-between flex-grow-1">
+                        <a class="main_title h4" href="#">{{ blog.headline }}</a>
+                        <p class="main_preview">{{ blog.description|truncatechars:250 }}</p>
+                    </div>
+                </article>
+            </li>
+            {% empty %}
+            <li class="col-12">
+                <p class="no-blogs">No blog posts available yet.</p>
+            </li>
+            {% endfor %}
+        
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+<section class="contacts section">
+    <div class="container container--contacts">
+        <div class="row d-flex flex-wrap">
+            <!-- Contact Info -->
+            <div class="contacts_info col-lg-6 col-md-12">
+                <div class="contacts_info-header text-center mb-4">
+                    <h2 class="contacts_info-header_title" data-aos="fade-down">Get in Touch</h2>
+                    <p class="contacts_info-header_text" data-aos="fade-up">
+                        We're here to answer your questions and make your stay unforgettable.
+                    </p>
+                </div>
+
+                <ul class="contacts_info-list row g-3">
+                    <!-- Phone -->
+                    <li class="contacts_info-list_item col-12 d-flex gap-3 align-items-start" data-aos="fade-up">
+                        <span class="theme-element theme-element--light media">
+                            <!-- ✅ Phone Icon SVG (Correct) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 1 .738-.073l2.522 1.262a.678.678 0 0 1 .291.893l-1.02 2.03a.678.678 0 0 1-.747.342c-.272-.07-.56-.145-.861-.223a11.72 11.72 0 0 0 5.515 5.514c-.078-.3-.153-.588-.223-.86a.678.678 0 0 1 .342-.748l2.03-1.02a.678.678 0 0 1 .893.291l1.262 2.522a.678.678 0 0 1-.073.738l-1.2 1.6a1.745 1.745 0 0 1-1.744.646c-2.837-.68-5.79-3.092-8.09-5.391C.48 6.92-1.93 3.968-1.25 1.13a1.745 1.745 0 0 1 .646-1.744l1.6-1.2z"/>
+                            </svg>
+                        </span>
+                        <div class="main">
+                            <h4 class="main_title mb-1">Phone</h4>
+                            <a class="link d-block" href="tel:8000803628">+91 8000803628</a>
+                            <a class="link d-block" href="tel:9574306763">+91 9574306763</a>
+                        </div>
+                    </li>
+
+                    <!-- Email -->
+                    <li class="contacts_info-list_item col-12 d-flex gap-3 align-items-start" data-aos="fade-up" data-aos-delay="50">
+                        <span class="theme-element theme-element--light media">
+                            <i class="icon-email icon fa-solid fa-envelope" aria-hidden="true"></i>
+                        </span>
+                        <div class="main">
+                            <h4 class="main_title mb-1">Email</h4>
+                            <a href="mailto:cmdarji8000@gmail.com" class="link d-block">cmdarji8000@gmail.com</a><br>
+                        </div>
+                    </li>
+
+                    <!-- Location -->
+                    <li class="contacts_info-list_item col-12 d-flex gap-3 align-items-start" data-aos="fade-up" data-aos-delay="100">
+                        <span class="theme-element theme-element--light media">
+                            <i class="icon-location icon fa-solid fa-map-marker-alt" aria-hidden="true"></i>
+                        </span>
+                        <div class="main">
+                            <h4 class="main_title mb-1">Location</h4>
+                            <span> Paras E-State,Bus Stand</span>
+                            <span>Dhanera,Gujarat</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-container col-lg-6 col-md-12 contact-map mt-4 mt-lg-0" data-aos="fade-left">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3630.5032334699617!2d72.0225292!3d24.5026634!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395cabe1bd8b9235%3A0x75c8dd813fa03a56!2sDeepjyot%20Hostel%20Dhanera!5e0!3m2!1sen!2sin!4v1748007838107!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; min-height: 450px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+{% endblock %}

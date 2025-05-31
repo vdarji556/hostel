@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<header class="page-header">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contacts</li>
+            </ol>
+        </nav>
+        <h1 class="page-title">Contact Us</h1>
+    </div>
+</header>
+
+<main class="contact-page">
+    <section class="contact-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 contact-info" data-aos="fade-up">
+                    <div class="contact-header mb-4">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-subtitle">We'd love to hear from you! Reach out to us with any questions or inquiries.</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item d-flex mb-4">
+                            <div class="contact-icon mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h5 class="contact-label">Phone</h5>
+                                <a href="tel:8000803628" class="contact-link">8000803628</a><br>
+                                <a href="tel:8974500769" class="contact-link">8974500769</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item d-flex mb-4">
+                            <div class="contact-icon mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h5 class="contact-label">Email</h5>
+                                <a href="mailto:cmdarji8000@gmail.com" class="contact-link">cmdarji8000@gmail.com</a><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-12 contact-map">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3630.5032334699617!2d72.0225292!3d24.5026634!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395cabe1bd8b9235%3A0x75c8dd813fa03a56!2sDeepjyot%20Hostel%20Dhanera!5e0!3m2!1sen!2sin!4v1748007838107!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    .page-header {
+        background-color: #f8f9fa;
+        padding: 2rem 0;
+        margin-bottom: 3rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #343a40;
+    }
+    
+    .breadcrumb {
+        background: transparent;
+        padding: 0;
+    }
+    
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #343a40;
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+        color: #6c757d;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-icon {
+        font-size: 1.5rem;
+        color: #007bff;
+        width: 40px;
+        text-align: center;
+    }
+    
+    .contact-label {
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-link {
+        color: #6c757d;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .contact-link:hover {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .contact-item {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-item:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .faq-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #343a40;
+        margin-bottom: 1rem;
+    }
+    
+    .faq-text {
+        color: #6c757d;
+        margin-bottom: 1rem;
+    }
+    
+    .map-container {
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (max-width: 991.98px) {
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+    }
+</style>
+{% endblock %}

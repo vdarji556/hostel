@@ -1,0 +1,56 @@
+{% load static %}
+<header class="header d-flex align-items-center" data-page="home">
+    <div class="container position-relative d-flex justify-content-between align-items-center">
+        <a class="brand d-flex align-items-center" href="{% url 'home' %}">
+            <span class="brand_logo">
+                <img src="{% static 'img/logo.png' %}" width="100" height="80" alt="Brand Logo">
+            </span>
+        </a>
+        <div class="header_offcanvas offcanvas offcanvas-end" id="menuOffcanvas">
+            <div class="header_offcanvas-header d-flex justify-content-between align-content-center">
+                <a class="brand d-flex align-items-center" href="{% url 'home' %}">
+                    <span class="brand_logo theme-element">
+                        {% comment %} <img src="{% static 'img/logo.png' %}" width="22" height="23" alt="Brand Logo"> {% endcomment %}
+                    </span>
+                </a>
+                <button class="close" type="button" data-bs-dismiss="offcanvas">
+                    <i class="icon-close--entypo"></i>
+                </button>
+            </div>
+            <nav class="header_nav">
+                <ul class="header_nav-list">
+                    <li class="header_nav-list_item">
+                        <a class="nav-item" href="{% url 'home' %}" data-page="about">Home</a>
+                    </li>
+                    <li class="header_nav-list_item">
+                        <a class="nav-item" href="{% url 'about' %}" data-page="about">About</a>
+                    </li>
+                    <li class="header_nav-list_item">
+                        <a class="nav-item" href="{% url 'gallery' %}" data-page="about">Gallery</a>
+                    </li>
+                    <li class="header_nav-list_item">
+                        <a class="nav-item" href="{% url 'blog' %}" data-page="about">blog</a>
+                    </li>
+                    <li class="header_nav-list_item">
+                        <a class="nav-item" href="{% url 'contacts' %}" data-page="about">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="socials d-flex align-items-center">
+                <li class="list-item">
+                    <a class="link" href="https://www.facebook.com/deepjyothosteldhanera/">
+                        <i class="icon-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a class="link" href="https://www.instagram.com/deepjyot_hostel_dhanera/">
+                        <i class="icon-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="header_trigger d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
+            <i class="icon-stream"></i>
+        </button>
+    </div>
+</header>

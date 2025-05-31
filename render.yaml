@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: host
+    env: python
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
+    startCommand: "gunicorn hostel.wsgi:application"
+    plan: free
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: hostel.settings
+      - key: SECRET_KEY
+        value: m2lq)oh&8ll8((*1986&j8fi6oi-!#^2!_-mcb)s&8@m*9b86_
+      - key: DEBUG
+        value: "False"

@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<header class="page">
+    <div class="container">
+        <ul class="breadcrumbs d-flex flex-wrap align-content-center">
+            <li class="list-item">
+                <a class="link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="list-item">
+                <a class="link" href="{% url 'about' %}">About</a>
+            </li>
+        </ul>
+        <h1 class="page_title">About</h1>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="about-hero" style="background: linear-gradient(rgb(12 5 5 / 50%), rgb(124 116 116 / 50%)), url('{% static 'img/back.jpg' %}'); background-size: cover; background-position: center; padding: 200px 0; color: white;">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="display-4 fw-bold mb-3">Welcome to Deepjyot Hostel, Dhanera</h1>
+                <p class="lead">“ઘર થી દૂર પોતાનું ઘર જેવી સુવિધા” – A Second Home for Students</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="{% static 'img/home1.jpeg' %}" alt="Deepjyot Hostel Building" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Our Story</h2>
+                    <p>Deepjyot Hostel was established with the aim of supporting students from nearby villages who come to Dhanera for quality education and a disciplined environment.</p>
+                    <p>We provide a well-structured and caring residential facility for school and college students, including special support for board and competitive exam preparation.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Amenities Section -->
+ <section class="amenities py-5 bg-white">
+    <div class="container">
+        <!-- Header Section -->
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">WE HAVE EVERYTHING YOU NEED</h2>
+            <p class="text-muted lead">Premium amenities for your complete comfort and convenience</p>
+        </div>
+
+        <!-- Amenities Grid -->
+        <div class="row justify-content-center g-4">
+            <!-- Group 1 -->
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap gap-4 justify-content-center">
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-wifi fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">HIGH-SPEED WIFI</p>
+                    </div>
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-location-dot fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">CENTRAL LOCATION</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 2 -->
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap gap-4 justify-content-center">
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-briefcase fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">LUGGAGE STORAGE</p>
+                    </div>
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-square-parking fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">DEDICATED PARKING</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 3 (Fixed typo: "WATER BREAKF PUBLICATIONS" → "WATER PURIFICATION") -->
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap gap-4 justify-content-center">
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-filter fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">WATER PURIFICATION</p>
+                    </div>
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-utensils fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">BREAKFAST & DINING</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 4 -->
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap gap-4 justify-content-center">
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-shirt fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">LAUNDRY SERVICES</p>
+                    </div>
+                    <div class="amenity-card text-center p-4 rounded-3">
+                        <i class="fas fa-bed fa-2x text-primary mb-3"></i>
+                        <p class="fw-medium mb-0">PREMIUM BEDDING</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+{% endblock %}

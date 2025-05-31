@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Photo Gallery | Hosteller{% endblock %}
+
+{% block content %}
+<header class="page">
+    <div class="container">
+        <ul class="breadcrumbs d-flex flex-wrap align-content-center">
+            <li class="list-item">
+                <a class="link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="list-item">
+                <a class="link" href="{% url 'gallery' %}">Photo Gallery of Our Hostel</a>
+            </li>
+        </ul>
+        <h1 class="page_title">Gallery</h1>
+    </div>
+</header>
+
+<section class="gallery section">
+    <div class="container"> 
+        <div class="gallery_grid d-grid">
+            {% for image in images %}
+            <figure class="gallery_grid-item" data-aos="zoom-in">
+                <a href="{{ image.image.url }}" data-caption="{{ image.caption }}" data-role="gallery-link" aria-label="View full-size {{ image.caption|default:'hostel image' }}">
+                    <picture>
+                        <source srcset="{{ image.image.url }}" type="image/webp">
+                        <img class="gallery_grid-item_img img-fluid lazy" src="{{ image.image.url }}" alt="{{ image.caption|default:'Hostel image' }}" loading="lazy">
+                    </picture>
+                    <div class="overlay d-flex align-items-center justify-content-center">
+                        <div class="overlay_focus">
+                            <svg width="105" height="106" aria-hidden="true">
+                                <use xlink:href="#zoom-icon"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </figure>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
